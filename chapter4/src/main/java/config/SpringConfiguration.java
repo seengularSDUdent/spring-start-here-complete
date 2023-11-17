@@ -13,16 +13,16 @@ import services.CommentService;
 public class SpringConfiguration {
 
     @Bean(name = "commentServiceBeanned")
-    CommentService commentService(CommentRepository commentRepository, @Qualifier("PUSH") CommentNotificationProxy commentNotificationProxy){
+    CommentService commentService(CommentRepository commentRepository, @Qualifier("EMAIL") CommentNotificationProxy commentNotificationProxy){
         CommentService commentService = new CommentService(commentRepository, commentNotificationProxy);
 
         return commentService;
     }
 
-    @Bean(value = "commentServiceComponented")
-    CommentService commentService0(CommentRepository commentRepository, @Qualifier("EMAIL") CommentNotificationProxy commentNotificationProxy){
-        CommentService commentService = new CommentService(commentRepository, commentNotificationProxy);
-
-        return  commentService;
-    }
+//    @Bean(value = "commentServiceComponented")
+//    CommentService commentService0(CommentRepository commentRepository, @Qualifier("EMAIL") CommentNotificationProxy commentNotificationProxy){
+//        CommentService commentService = new CommentService(commentRepository, commentNotificationProxy);
+//
+//        return  commentService;
+//    }
 }

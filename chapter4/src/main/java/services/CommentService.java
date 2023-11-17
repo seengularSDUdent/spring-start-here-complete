@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 import proxies.CommentNotificationProxy;
 import repositories.CommentRepository;
 
+@Component(value = "commentServiceComponented")
 public class CommentService {
 
     private final CommentRepository commentRepository;
