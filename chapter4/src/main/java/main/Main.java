@@ -24,3 +24,8 @@ public class Main {
         commentServiceBeanned.publishComment(comment);
     }
 }
+
+//When you'll use @Qualifier to give the name you use it only in places where you can select with annotation @Qualifier.
+//It's possible to combine bean created in configuration file and bean created as component.
+//Bean which is created in configuration class can take a name from name and value parameters of @Bean.
+//Bean which is created as component can't take a name parameter of @Component name could be given only by value parameter.
