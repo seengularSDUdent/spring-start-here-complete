@@ -1,6 +1,7 @@
 package main;
 
 import config.SpringConfiguration;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import proxies.CommentNotificationProxy;
 import proxies.EmailCommentNotificationProxy;
@@ -16,8 +17,10 @@ public class Main {
 
         Comment comment = new Comment("James", "Not bad!");
 
-        CommentService commentService = context.getBean(CommentService.class);
+        CommentService commentServiceComponented = context.getBean("commentServiceComponented", CommentService.class);
+        CommentService commentServiceBeanned = context.getBean("commentServiceBeanned", CommentService.class);
 
-        commentService.publishComment(comment);
+        commentServiceComponented.publishComment(comment);
+        commentServiceBeanned.publishComment(comment);
     }
 }
