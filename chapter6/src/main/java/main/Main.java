@@ -18,8 +18,8 @@ public class Main {
 
         CommentService commentService = context.getBean(CommentService.class);
 
-        commentService.publishComment(comment);
-        commentService.editComment(comment);
+//        commentService.publishComment(comment);
+//        commentService.editComment(comment);
         commentService.deleteComment(comment);
     }
 }
