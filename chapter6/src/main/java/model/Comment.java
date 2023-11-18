@@ -17,4 +17,9 @@ public class Comment {
     public String getAuthor() {
         return this.author;
     }
+
+    @Override
+    public String toString(){
+        return "Comment of: " + getAuthor() + ", with text: " + getText();
+    }
 }
