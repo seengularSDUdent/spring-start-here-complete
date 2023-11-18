@@ -17,8 +17,9 @@ public class Main {
         Comment comment = new Comment("Nolan", "I like a juice.");
 
         CommentService commentService = context.getBean(CommentService.class);
-        String value = commentService.publishComment(comment);
 
-        logger.info(value);
+        commentService.publishComment(comment);
+        commentService.editComment(comment);
+        commentService.deleteComment(comment);
     }
 }
