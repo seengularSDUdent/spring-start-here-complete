@@ -1,10 +1,10 @@
-package com.example.chapter7;
+package com.example.main;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Chapter7ApplicationTests {
+class Chapter7V2ApplicationTests {
 
 	@Test
 	void contextLoads() {
