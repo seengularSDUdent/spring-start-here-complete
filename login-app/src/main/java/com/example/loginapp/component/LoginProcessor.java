@@ -12,13 +12,17 @@ public class LoginProcessor {
     private String password;
 
     private LoggedUserManagementService loggedUserManagementService;
+    private LoginCountService loginCountService;
 
     @Autowired
-    public void setLoggedUserManagementService(LoggedUserManagementService loggedUserManagementService) {
+    public void setLoggedUserManagementService(LoggedUserManagementService loggedUserManagementService, LoginCountService loginCountService) {
         this.loggedUserManagementService = loggedUserManagementService;
+        this.loginCountService = loginCountService;
     }
 
     public boolean login(){
+
+        loginCountService.increment();
 
         String username = this.getUsername();
         String password = this.getPassword();
